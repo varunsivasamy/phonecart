@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - TecH BuZZ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    header h1 {
+      background-color: #2d00a7;
+      color: white;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+      font-size: 28px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    form {
+      padding: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2d00a7;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1e0075;
+    }
+
+    .image-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-box img {
+      max-width: 80%;
+      border-radius: 10px;
+    }
+
+    .message {
+      text-align: center;
+      color: red;
+      font-weight: bold;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    a {
+      color: #2d00a7;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Login</h1>
+    </header>
+    <div class="image-box">
+      <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/08/10/918564-apple-iphone-12.jpg" alt="Product Image">
+    </div>
+    <form action="login.php" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <p class="message"><?= $message ?? '' ?></p>
+    <p>Don't have an account? <a href="signup page.html">Sign up here</a></p>
+  </div>
+
+</body>
+</html>
