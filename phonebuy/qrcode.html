@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecH Buzz</title>
+    <style>
+        body{
+            background-color: silver;
+        }
+
+        .qr{
+            text-align: center;
+        }
+
+        .payment-status{
+            position: absolute;
+            top: 150px;
+            left: 580px;   
+        }
+
+        #print{
+            position: absolute; 
+            left: 120px;
+            padding: 8px;
+            width: 120px;
+            cursor: pointer;
+            border: 1px solid white;
+            color: white;
+            background-color: blue;
+        }
+
+        #link{
+            position: absolute;
+            top: 450px;
+            left: 580px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="qr">QR Code</h2>
+    <h3 class="qr">Scan the below 👇 qr code to pay</h3>
+    <div class="payment-status">
+    <img src="qr.jpg" alt="qrcode" style="width: 30%; height: 30%;"><br><br><br><br>
+    <button id="print" onclick="payment()">print receipt</button>
+    </div>
+    <div id="link">
+    <a href="nn.html">go to dashboard ?</a>
+    </div>
+    <script>
+        function payment()
+        {
+            if (payment)
+            {
+                document.getElementById('print').innerText = print()
+            }
+            else
+            {
+                document.getAnimations('print').innerText = print()
+            }
+        }
+
+    </script>
+</body>
+</html>

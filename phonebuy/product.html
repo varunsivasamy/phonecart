@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecH BuZZ</title>
+    <style>        
+        body{
+            background-color: plum;
+        }
+
+        img{
+            display: flex;
+            width: 100%;
+            margin: 7px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+       }
+
+       button:hover{
+            cursor: pointer;
+       }
+
+       .pics{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+       }
+
+       #zoom:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 5px 5px black;
+        border-radius: 15px;
+        background-color: rgb(30, 196, 187);
+        color: white ;
+        transition: all ease 0.8s;
+       }
+
+       #a1{
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        <h1 style="text-align: center; background-color: black; color: white;">WELCOME TO TecH BuZZ SHOPPING MARKET</h1>
+        </header>
+        <div class="sub1">
+            <h2 style="text-align: center; background-color: black; color: white;">Our Products</h2>
+            <div style="margin-bottom: 20px; text-align: right;">
+                <input type="text" id="searchBox" placeholder="search any products" style="width: 300px; border: 2px solid black; border-radius: 10px; padding: 4px;">
+                <button onclick="searchProduct()" style = "padding:4px; border: 1px solid black; border-radius: 10px; height: auto; color:white; background-color: green;">search</button>
+            </div>
+            <div class="pics">
+                <table>
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px; height: 220px;" src="aaaaaa.jpegs" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">VIVO V27 5G </h2><h2 style="font-size: small; text-align: center;">(Magic Blue, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.30000</h2><input onclick="go()" id="1" type="submit" name="submit"></div></td>
+                        <td><div id="zoom"><img style="width: 200px; height: 220px;" src="vivo2.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">VIVO V30E 5G </h2><h2 style="font-size: small; text-align: center;">(Glitter Aqua , 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.20000</h2><input onclick="go()" class="a1" type="submit" name="submit"></div></td>
+                        <td><div id="zoom"><img style="width: 200px; height: 210px;" src="vivo3.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">VIVO V27 5G </h2><h2 style="font-size: small; text-align: center;">(Magic Blue, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.32000</h2><input onclick="go()" class="a1" type="submit" name="submit"></div></td>
+                        <td><div id="zoom"><img style="width: 200px; height: 230px;" src="vivo5.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">VIVO V29 5G </h2><h2 style="font-size: small; text-align: center;">(Dual sim Black, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(X80 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.40000</h2><input onclick="go()" class="a1" type="submit" name="submit"></div></td>
+                        <td><div id="zoom"><img style="width: 200px; height: 250px;" src="vivo4.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">VIVO Y2000 5G </h2><h2 style="font-size: small; text-align: center;">(DesertGold, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.35000</h2><input onclick="go()" class="a1" type="submit" name="submit"></div></td>
+                        <td><div id="zoom"><img style="width: 200px; height: 230px;" src="vivo6.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">VIVO X80  </h2><h2 style="font-size: small; text-align: center;">(Cosmic Black, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.31000</h2><input onclick="go()" class="a1" type="submit" name="submit"></div></td>
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px;" src="sam1.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">SAMSUNG GALAXY A34 5G </h2><h2 style="font-size: small; text-align: center;">(AWESOME VIOLET, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.60000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="sam2.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">GALAXY S23 ULTRA 5G </h2><h2 style="font-size: small; text-align: center;">(GREY PING , 256 GB) </h2><h2 style="font-size: small; text-align: center;">(12 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.150000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="sam3.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">GALAXY S23 ULTRA 5G </h2><h2 style="font-size: small; text-align: center;">(Navy Star, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(12 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.148000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="sam4.jpeg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">SAMSUNG GALAXY A34 5G </h2><h2 style="font-size: small; text-align: center;">(Golden Rag, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.80000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="sam5.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">SAMSUNG GALAXY A34 5G </h2><h2 style="font-size: small; text-align: center;">(Grey Top, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.85000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="sam6.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">M35 5G  </h2><h2 style="font-size: small; text-align: center;">(Dark Blue, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.45000</h2></div></td>
+                    </tr>
+
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px;" src="red1.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Redmi 12 5G </h2><h2 style="font-size: small; text-align: center;">(Pastel Blue, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.20000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="red2 .webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Redmi Note 13 pro</h2><h2 style="font-size: small; text-align: center;">(Scarlet Red , 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.22000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="red3.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Redmi 13C 5G </h2><h2 style="font-size: small; text-align: center;">(Startrail Silver, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.24000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="red4.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Redmi A4 5G </h2><h2 style="font-size: small; text-align: center;">(Sparkle Purple, 64 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.23500</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="red5.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Redmi 12 5G </h2><h2 style="font-size: small; text-align: center;">(Jade Black 128 GB) </h2><h2 style="font-size: small; text-align: center;">(6 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.25000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 190px; height: 210px;" src="red6.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Redmi 10 4G  </h2><h2 style="font-size: small; text-align: center;">(Pacific Blue Blue, 64 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.19000</h2></div></td>
+                    </tr>
+
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px;" src="i1.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">iphone 16e</h2><h2 style="font-size: small; text-align: center;">(White , 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.120000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="i2.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">iphone 16</h2><h2 style="font-size: small; text-align: center;">(Ultramarine , 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.124000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="i3.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">iphone 16 </h2><h2 style="font-size: small; text-align: center;">(Desert Titanium, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.135000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="i4.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Apple iphone 16 </h2><h2 style="font-size: small; text-align: center;">(Pink, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.90000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="i5.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Apple iphone 12</h2><h2 style="font-size: small; text-align: center;">(Apple i phone XR 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.80000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="i6.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Apple iPhone 11 64GB </h2><h2 style="font-size: small; text-align: center;">(Green, 64 GB) </h2><h2 style="font-size: small; text-align: center;">(6 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.90000</h2></div></td>
+                    </tr>
+
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px;" height="auto" src="oppo1.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo A79 5G</h2><h2 style="font-size: small; text-align: center;">(glowing Green, 128 Gb) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.22000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="220px" src="oppo2.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo A78 5G</h2><h2 style="font-size: small; text-align: center;">(Glowing Blue, 128GB RAM) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.24000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="oppo3.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo 2681 </h2><h2 style="font-size: small; text-align: center;">(Sparkle Black 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.30000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="200px" src="oppo4.avif" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo A53 </h2><h2 style="font-size: small; text-align: center;">(Pale Green, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(6 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.16000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="220px" src="oppo5.png" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo A3</h2><h2 style="font-size: small; text-align: center;">(Violet Rare 128 GB) </h2><h2 style="font-size: small; text-align: center;">(6 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.18000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="220px" src="oppo6.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo A3 </h2><h2 style="font-size: small; text-align: center;">(Green, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.18500</h2></div></td>
+                    </tr>
+
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="xio1.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Xiaomi 11i 5G</h2><h2 style="font-size: small; text-align: center;">(Stealth Black, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(4 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.25000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px; "height="210px" src="xio2.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Xiaomi 11T Pro 5G Hyperphone</h2><h2 style="font-size: small; text-align: center;">(Celestial Magic, 128GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.26000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="xi3.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Xiaomi 8i </h2><h2 style="font-size: small; text-align: center;">(Ultra Mig, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.27000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="xio4.png" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Xiaomi 9T pro </h2><h2 style="font-size: small; text-align: center;">(Silver, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(6 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.28000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="xio5.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Xiaomi 5G</h2><h2 style="font-size: small; text-align: center;">(Blue Xiaomi 256 GB) </h2><h2 style="font-size: small; text-align: center;">(16 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.285000/h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="xio6.avif" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Xiaomi plus 5G </h2><h2 style="font-size: small; text-align: center;">(Redmi Note 12 pro, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.23500</h2></div></td>
+                    </tr>
+
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="vivo7.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Vivo 5G</h2><h2 style="font-size: small; text-align: center;">(Scarlet Red, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(12 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.40000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px; "height="210px" src="vivo8.png" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Vivo Y36</h2><h2 style="font-size: small; text-align: center;">(Meteor Black, 128GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.24000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="vivo9.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Vivo Y18 </h2><h2 style="font-size: small; text-align: center;">(Gem Green, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.38000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="vivo10.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Vivo T3 </h2><h2 style="font-size: small; text-align: center;">(Majestic Black, 128 GB) </h2><h2 style="font-size: small; text-align: center;">(6 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.20000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="vivo11.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Vivo Y300</h2><h2 style="font-size: small; text-align: center;">(Titanium Silver 256 GB) </h2><h2 style="font-size: small; text-align: center;">(16 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.29500</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="vivo12.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Vivo V40e</h2><h2 style="font-size: small; text-align: center;">(Royal Bronze, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.32500</h2></div></td>
+                    </tr>
+
+                    <tr>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="oppo7.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo K12x 5G</h2><h2 style="font-size: small; text-align: center;">( Breeze Blue, 256 GB) </h2><h2 style="font-size: small; text-align: center;">(12 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.19000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px; "height="210px" src="oppo8.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Oppo Reno 7 Pro 5G</h2><h2 style="font-size: small; text-align: center;">(Starlight Black, 128GB) </h2><h2 style="font-size: small; text-align: center;">(8 GB RAM)</h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.22000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="but1.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Vivo T3 </h2><h2 style="font-size: small; text-align: center;">(Majestic Black, 128 GB) </h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.2500</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" height="210px" src="but2.jpg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Lava A3 </h2><h2 style="font-size: small; text-align: center;">1800mAh Battery 1.8 inch LCD  </h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.3000</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px;" src="but3.jpeg" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">Lava A3 </h2><h2 style="font-size: small; text-align: center;">Vibe Dual Sim Keypad Mobile Phone  </h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.3200</h2></div></td>
+                        <td><div id="zoom"><img style="width: 200px; height: 200px;" src="but4.webp" alt="image"><h2 style="text-align: center;"></h2><h2 style="font-size: small; text-align: center;">32 Rom Lava A-9</h2><h2 style="font-size: small; text-align: center;">Dual Sim Mobile Phone </h2><h2 style="color: green; text-align: center; font-size: medium;">Rs.4000</h2></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+
+    <footer>
+        <h1 style="text-align: center; color: white; background-color: black;">Thank You For Your Support</h1>
+    </footer>
+
+    <script>
+        function go(){
+            location.href = "1.php";
+        }
+        function searchProduct(){
+            let searchText = document.getElementById("searchBox").value.toLowerCase();
+            let products = document.querySelectorAll(".pics td");
+
+            products.forEach(function(product)
+            {
+                let productName = product.innerText.toLowerCase();
+                    if(productName.includes(searchText)){
+                        product.style.display = "table-cell";
+                    }
+                    else{
+                        product.style.display = "none";
+                    }
+            });
+        }
+    </script>
+</body>
+</html>
